@@ -13,7 +13,7 @@ export const Tasks: Task[] = [
         reminder: true
     },
     {
-        id: 1,
+        id: 3,
         text: "terminar tercer modulo angular",
         day: "Abril 6 a las 2:32",
         reminder: false

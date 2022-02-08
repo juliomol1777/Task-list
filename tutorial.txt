@@ -1,0 +1,26 @@
+con git comienzo usando master, cada vez que hago un componente nuevo, creo un branch
+git branch nombreDelBranch
+cambio desde master a nombreDelBranch con
+git checkout nombreDelBranch 
+trabajo ahi y una vez que funciona bien hago el add, luego el commit
+cambio al master para unir el branch
+git checkour master
+lo mergeo 
+git merge nombreDelBranch 
+
+
+instalo fontawesome para angular
+ng add @fortawesome/angular-fontawesome@
+fuentes e iconos.
+se agrega al packet.json
+instalo json server, que emula una api rest con base de datos con un mock json
+npm install json-server
+agrego en el package.json el script de funcionamiento
+"server": "json-server --watch db.json --port 5001"
+db.json es el archivo donde se guardan los datos, lo creo en la raiz del proyecto
+npm run server para correrlo, y en el puertp 5001 en el navegador veo el contenido del archivo db.json
+
+-------------------------------------
+en el task.service importo el httpClient y httpHandler, para trbabjar con json-server
+tambien lo importo en el app.module
+en el task.service guardo la comunicacion con el api json 

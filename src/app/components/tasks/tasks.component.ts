@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { TaskService } from 'src/app/service/task.service';
 import { Task } from 'src/app/Task';
-import { Tasks } from 'src/app/mock-task';
-
 
 @Component({
   selector: 'app-tasks',
@@ -10,11 +9,13 @@ import { Tasks } from 'src/app/mock-task';
 })
 export class TasksComponent implements OnInit {
 
-  tasks: Task[] = Tasks
+  tasks: Task[] = []
 
-  constructor() { }
+  constructor(private TaskService: TaskService) { }
 
   ngOnInit(): void {
+    //desde el servicio viene, subscribe funciona asincrono
+    this.TaskService.getTask().subscribe(tasks => this.tasks = tasks)
   }
 
 }
